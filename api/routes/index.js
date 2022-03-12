@@ -23,9 +23,7 @@ router.use(bodyParser.urlencoded({extended: true}));
 router.use(bodyParser.json())
 
 router.get("/",(req,res) => {
-    res.render('index');
-    let requestPollingResult = DB_REQUESTS.polls_req();
-     
+    res.render('index');  
 })
 
 router.get("/getResult",(req,res)=> {
