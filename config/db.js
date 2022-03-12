@@ -2,10 +2,10 @@ const mysql = require('mysql');
 require('dotenv');
 
 const db = mysql.createConnection({
-    host : 'localhost',
-    user : 'root',
+    host : process.env.DB_HOST,
+    user : process.env.DB_USER,
     password : process.env.DB_PASSWORD,
-    database : 'bincom test'
+    database : process.env.DB_NAME
 });
 
 db.connect((err) => { if(err) throw err; else console.log('SQL_db connected') });
