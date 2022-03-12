@@ -1,0 +1,37 @@
+<%- include("./partials/header") %>
+<title>Poll Result</title>
+</head>
+<body>
+    <%- include("./partials/nav") %>
+        <div class="table-resposive-lg" style="margin-top: 80px;">
+            <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Polling Unit Number</th>
+                    <th scope="col">Polling Unit Name</th>
+                    <th scope="col">Polling Unit Description</th>
+                    <th scope="col">Latitude</th>
+                    <th scope="col">Longitude</th>
+                    <th scope="col">Ip Address</th>
+                  </tr>
+                </thead>
+                <tbody>
+                <% let count = 1 %>
+                    <% for (let item in data.res) { %>
+                        <tr>
+                            <th scope="row"><%= count %></th>
+                            <td><%= data.res[item].polling_unit_number %></td>
+                            <td><%= data.res[item].polling_unit_name %></td>
+                            <td><%= data.res[item].polling_unit_description %></td>
+                            <td><%= data.res[item].lat %></td>
+                            <td><%= data.res[item].long %></td>
+                            <td><%= data.res[item].user_ip_address %></td>
+                        </tr>
+                        <% count++ %>
+                    <% } %>
+                </tbody>
+              </table>
+        </div>
+</body>
+<%- include("./partials/footer") %>

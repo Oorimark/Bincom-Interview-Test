@@ -1,0 +1,42 @@
+<%- include("./partials/header") %>
+<%- include("./partials/nav") %>
+<style>
+       body{
+        display: flex; justify-content: center;
+        align-items: center; height: 70vh; flex-direction: column;
+    }
+    table{width: 70%;} 
+    .back{display: flex; align-items: center;}
+</style>
+<body>
+    <% if (data.res == null || data.res == '') { %>
+        <h3 style="opacity: 0.5">Sorry this Local Government Polling unit do not have a vote</h3>
+    <% } %>
+    <% if (data.res != null) { %>
+      <table class="table table-striped">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Party Abrreviation</th>
+              <th scope="col">Score</th>
+            </tr>
+          </thead>
+          <tbody>
+          <% let count = 1 %>
+              <% for (let item in data.res) { %>
+                  <tr>
+                      <th scope="row"><%= count %></th>
+                      <td><%= data.res[item].party_abbreviation %></td>
+                      <td><%= data.res[item].party_score %></td>
+                  </tr>
+                  <% count++ %>
+              <% } %>
+          </tbody>
+        </table>
+  <% } %>
+
+
+      <button class="btn btn-primary back" onclick="{window.history.back()}">
+        <i class="bi bi-arrow-left-short"></i> BACK
+      </button>
+</body>

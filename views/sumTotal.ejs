@@ -1,0 +1,25 @@
+<%- include("./partials/header") %>
+<title>Question 2</title>
+</head>
+<%- include("./partials/nav") %>
+<style>
+    body{
+        display: flex; justify-content: center;
+        align-items: center; height: 70vh;
+    } 
+     form{display: flex; width: calc(40% + 35px)}
+</style>
+ <body>
+    <form action="/total" method="post">
+        <select class="form-select" aria-label="Default select example" name="lga">
+            <option selected>Select Local Government</option>
+            <% for (let list in data.res) { %>
+               <option value= <%= data.res[list].lga_id %> > <%= data.res[list].lga_name %> </option>  
+            <% } %>
+          </select>
+          <div class="col-auto">
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </div>
+    </form>
+</body>
+<%- include("./partials/footer") %>
