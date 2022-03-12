@@ -1,6 +1,8 @@
 const express = require('express');
 const routes = require('./api/routes')
-const port = 5000;
+require('dotenv')
+
+const port = process.env.PORT || 5000;
 const app = express()
 app.set('view engine', 'ejs')
 app.set('views','./views');
