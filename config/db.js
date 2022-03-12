@@ -1,4 +1,4 @@
-const mysql = require('mysql');
+const mysql = require('mysql')
 require('dotenv');
 
 // process.env.DB_HOST || 
@@ -8,7 +8,8 @@ require('dotenv');
 
 const db = mysql.createConnection({
     host : "mysql-71846-0.cloudclusters.net",
-    user : "markbincom",
+    port : "19414",
+    user : "admin",
     password :  "LwqrO6YF",
     database : "bincom_test"
 });
