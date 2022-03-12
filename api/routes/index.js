@@ -2,7 +2,6 @@ const express = require('express');
 const DB_REQUESTS = require('../res')
 const db = require('../../config/db')
 const fs = require('fs');
-const parseJson = require('parse-json');
 const bodyParser = require('body-parser')
 const { urlencoded } = require("body-parser"); 
 
