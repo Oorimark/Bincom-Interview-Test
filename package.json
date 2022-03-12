@@ -1,5 +1,5 @@
 {
-  "name": "bincomtest",
+  "name": "node-js",
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
@@ -7,7 +7,7 @@
     "test": "test"
   },
   "scripts": {
-    "start": "nodemon app"
+    "start": "node app"
   },
   "author": "Mark Oori",
   "license": "MIT",
