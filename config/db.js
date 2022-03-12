@@ -1,11 +1,16 @@
 const mysql = require('mysql');
 require('dotenv');
 
+// process.env.DB_HOST || 
+// process.env.DB_USER  || 
+// process.env.DB_PASSWORD ||
+// process.env.DB_NAME || 
+
 const db = mysql.createConnection({
-    host : process.env.DB_HOST || "mysql-71846-0.cloudclusters.net",
-    user : process.env.DB_USER  || "markbincom",
-    password : process.env.DB_PASSWORD || "LwqrO6YF",
-    database : process.env.DB_NAME || "bincom_test"
+    host : "mysql-71846-0.cloudclusters.net",
+    user : "markbincom",
+    password :  "LwqrO6YF",
+    database : "bincom_test"
 });
 
 db.connect((err) => { if(err) throw err; else console.log('SQL_db connected') });
