@@ -7,7 +7,7 @@ class DB_REQUESTS{
 
     static polls_req(){
         // select all polling unit
-        let sql = "SELECT * FROM polling_unit LIMIT 10"
+        let sql = "SELECT * FROM polling_unit LIMIT 300"
         db.query(sql,(err,res) => {
             if(err){console.log(err);}
             else{
