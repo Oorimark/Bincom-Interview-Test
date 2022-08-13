@@ -9,4 +9,4 @@ One major challenges I faced was getting data from the database up to the client
 The application can be furthur improved on by Using WebSocket to connect the server to the client. This is said so the user can have a seemless experience while using the applicaiton
 
 ### Author: 
-    Oori Mark [website](www.oorimark.netlify.app)
+Oori Mark [website](www.oorimark.netlify.app)
